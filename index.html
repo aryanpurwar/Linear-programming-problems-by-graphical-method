@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPP Solver</title>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Linear Programming Solver (Graphical Method)</h1>
+
+    <div class="input-section">
+        <h2>Define Your LPP</h2>
+        <form id="lppForm">
+            <label>Objective Function: Maximize
+                <input type="text" id="objective" placeholder="e.g., 3x + 4y">
+            </label>
+            <div id="constraints">
+                <label>Constraint 1:
+                    <input type="text" placeholder="e.g., x + y <= 10">
+                </label>
+            </div>
+            <button type="button" onclick="addConstraint()">Add Constraint</button>
+            <button type="button" onclick="solveLPP()">Solve</button>
+        </form>
+    </div>
+
+    <div id="plot"></div>
+    <div id="solution"></div>
+
+    <footer>
+        <p>Created by: Aryan Purwar 
+        </p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
